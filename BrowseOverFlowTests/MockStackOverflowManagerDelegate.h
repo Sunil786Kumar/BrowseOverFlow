@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StackOverflowManagerDelegate.h"
 
-@interface MockStackOverflowManagerDelegate : NSObject
+@interface MockStackOverflowManagerDelegate : NSObject<StackOverflowManagerDelegate>
+
+@property (strong) NSError *fetchError;
+
 
 @end
